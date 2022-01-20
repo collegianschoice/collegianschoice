@@ -200,7 +200,26 @@
           max-height: 300px;
           max-width: 90%;}
   
-
+    @media only screen and (max-width:465px) {
+          .preview img {
+            min-width: 24%;
+          }
+          .thumbnails img {
+            height:10px;
+          }
+          .box h1 {
+            font-size: 20px;
+          }
+          .location iframe {
+            height: 50px;
+          }
+          .grid2 ul{
+            display: none;
+          }
+          .property-summary p{
+            font-size: .9rem;
+          }
+        }
 
   .location {
       grid-area: location;
