@@ -1,0 +1,252 @@
+.grid {
+  display: grid;
+  margin-top: 2px;
+  grid-template-rows: 7% 14% 21% 1fr 7%;
+  grid-template-columns:  50% 50%;
+  grid-template-areas:    
+                          "header header"
+                          "banner banner"
+                          "property-summary property-summary"
+                          "photos location"
+                          "footer footer";
+                          
+
+  width: auto;
+  gap: 10px;
+  text-align: center;
+  background-color: lightcyan;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: space-around;
+
+}
+
+.grid2 {
+    display: grid;
+    margin-top: 0px;
+    grid-template-rows: 10% 10% 10% 1fr 1fr 1fr 7%;
+    grid-template-columns:  50% 50%;
+    grid-template-areas:    "header header"
+                            "banner2 banner2"
+                            "property-summary property-summary"
+                            "photos102 photos203"
+                            "photos201202 photos101"
+                            "photos location"
+                            "footer footer";
+
+                            
+
+    width: auto;
+    gap: 10px;
+    text-align: center;
+    background-color: lightcyan;
+    
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: space-around;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Comic Sans', 'Arial', 'Didot', 'Cursive';
+    
+  }
+  
+
+ .nav h5 {
+   float: left;
+ }
+
+  .nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(99, 220, 241);
+    overflow: hidden;
+
+  }
+
+  .nav li {
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+
+  .header {
+    grid-area: header;
+    display:block;
+    height:auto;
+    margin-top: auto;
+    background-color: lightcyan;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    line-height: 10px;
+  }
+  
+  .header h2{
+    line-height: 2rem;
+  }
+  .banner {
+    grid-area: banner;
+    background-image: url('./media/exterior_bldg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    max-height: 20rem;
+    margin: 0px 10px 20px 0px;
+ 
+  }
+
+  .banner2 {
+    grid-area: banner2;
+    background-image: url('./media/MBstadium2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-height: 20rem;
+    margin: 0px 10px 0px 0px;
+ 
+  }
+  
+  .property-summary {
+    grid-area: property-summary;
+    max-height: 300px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 25rem;
+  }
+
+.property-summary p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-self: center;
+    text-align: left;
+    width: 80%;
+    overflow-wrap: scroll;
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width:625px) {
+    .property-summary p {
+    font-size: 0.99rem;
+  }
+}
+
+@media only screen and (min-width:990px) {
+  .property-summary p {
+    font-size: 1.6rem;
+  }
+}
+  
+  .gallery {
+    margin:10px;
+    grid-area: photos;
+    display: grid;
+    grid-template: 100px 200px 1/ 25% 1fr;
+    justify-content: self;
+    align-content: stretch;
+  }
+
+  .gallery h3{
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+ 
+  }
+  .gallery .thumbnails{
+      grid-column: 1 / span 2;
+      grid-row: 3 / span 1;
+  }
+
+  .gallery .preview{
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1;
+      justify-content: stretch;
+  }
+
+  
+   .thumbnails img {
+          height: 80px;
+          border: 4px solid #555;
+          padding: 1px;
+          margin: 0 10px 10px 0;
+      }
+  
+   .thumbnails img:hover {
+          border: 4px solid #00ccff;
+          cursor:pointer;
+      }
+  
+   .preview img {
+          border: 4px solid #444;
+          padding: 1px;
+          max-height: 300px;
+          max-width: 90%;}
+  
+
+
+  .location {
+      grid-area: location;
+      margin: 10px;
+      overflow-wrap: scroll;
+  }
+  
+  .location iframe{
+    min-height: 400px;
+    width: 89%;
+    margin-top: 58px;
+  }
+  
+ul {
+      text-align: left;
+  }
+ 
+  .footer {
+      grid-area: footer;
+      text-align: center;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .button{
+      margin: 20px;
+  }
+
